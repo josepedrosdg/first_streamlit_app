@@ -1,10 +1,14 @@
+import pandas as pd
+import streamlit as sl
 
-import streamlit
+sl.title('First Streamlit App!')
 
-streamlit.title('First Streamlit App!')
+sl.header('A header')
 
-streamlit.header('A header')
+sl.text('Some text 🥑')
 
-streamlit.text('Some text 🥑')
+sl.header('🥭 Another Header 🥝')
 
-streamlit.header('🥭 Another Header 🥝')
+my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+
+sl.dataframe(my_fruit_list)
